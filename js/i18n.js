@@ -60,6 +60,7 @@ const TRANSLATIONS = {
     'dp.hero.sub':'A modern, open-source disk partitioning and management utility for GNU/Linux. Built for everyone — from power users to those who just need a clean interface to manage their drives.',
     'dp.btn.codeberg':'View on Codeberg','dp.btn.targz':'Download Source (.tar.gz)','dp.btn.zip':'Download Source (.zip)',
     'dp.spec.foss':'Free & Open Source','dp.spec.uefi':'UEFI-aware','dp.spec.telemetry':'None',
+    'dp.spec.license.key':'License','dp.spec.type.key':'Type','dp.spec.part.key':'Partitioning','dp.spec.platform.key':'Platform','dp.spec.firmware.key':'Firmware','dp.spec.telemetry.key':'Telemetry',
     'dp.overview.label':'Overview','dp.overview.title':'What is DiskParted?',
     'dp.overview.p1':'DiskParted is a disk partitioning and management utility designed for GNU/Linux systems. It provides a clean, approachable interface over the complexity of disk management — whether you\'re setting up a new machine, resizing partitions, or managing storage across multiple drives.',
     'dp.overview.p2':'It supports both GPT and MBR partition tables, is fully UEFI-aware, and ships with no telemetry or lock-in of any kind. The source code is publicly available on Codeberg under the GPLv3 license — you can inspect it, modify it, and redistribute it freely.',
@@ -134,6 +135,21 @@ const TRANSLATIONS = {
     'preorder.form.opt7':'Everything — keep me posted',
     'preorder.form.ctx.placeholder':'e.g. I\'m a sysadmin managing 200 Linux workstations and need reliable tooling…',
     'preorder.back':'← Back to Home',
+    // Preorder form states (JS-rendered)
+    'preorder.form.submitting':'Submitting…',
+    'preorder.form.already':'You\'re already on the list!',
+    'preorder.form.error':'Something went wrong. Please try again.',
+    'preorder.form.network':'Network error. Please check your connection and try again.',
+    'preorder.success.title':'You\'re on the list!',
+    'preorder.success.body':'We\'ll send updates to',
+    'preorder.success.thanks':'Thank you for being an early supporter of Technologies Budgie.',
+    // Contact form states (JS-rendered)
+    'contact.form.submitting':'Sending…',
+    'contact.form.error':'Something went wrong. Please try again.',
+    'contact.form.network':'Network error. Please check your connection and try again.',
+    'contact.success.title':'Message sent!',
+    'contact.success.body':'We\'ll get back to you at',
+    'contact.success.body2':'as soon as we can.',
   },
 
   fr: {
@@ -193,6 +209,7 @@ const TRANSLATIONS = {
     'dp.hero.sub':'Un utilitaire moderne et open source de partitionnement et de gestion de disque pour GNU/Linux. Conçu pour tous — des utilisateurs avancés à ceux qui ont juste besoin d\'une interface claire pour gérer leurs disques.',
     'dp.btn.codeberg':'Voir sur Codeberg','dp.btn.targz':'Télécharger la source (.tar.gz)','dp.btn.zip':'Télécharger la source (.zip)',
     'dp.spec.foss':'Libre & Open Source','dp.spec.uefi':'Compatible UEFI','dp.spec.telemetry':'Aucune',
+    'dp.spec.license.key':'Licence','dp.spec.type.key':'Type','dp.spec.part.key':'Partitionnement','dp.spec.platform.key':'Plateforme','dp.spec.firmware.key':'Micrologiciel','dp.spec.telemetry.key':'Télémétrie',
     'dp.overview.label':'Aperçu','dp.overview.title':'Qu\'est-ce que DiskParted ?',
     'dp.overview.p1':'DiskParted est un utilitaire de partitionnement et de gestion de disque conçu pour les systèmes GNU/Linux. Il offre une interface claire et accessible sur la complexité de la gestion des disques — que vous configuriez une nouvelle machine, redimensionniez des partitions, ou gériez le stockage sur plusieurs disques.',
     'dp.overview.p2':'Il prend en charge les tables de partitions GPT et MBR, est entièrement compatible UEFI, et ne contient aucune télémétrie ni verrouillage. Le code source est disponible publiquement sur Codeberg sous licence GPLv3 — vous pouvez l\'inspecter, le modifier et le redistribuer librement.',
@@ -267,6 +284,21 @@ const TRANSLATIONS = {
     'preorder.form.opt7':'Tout — tenez-moi informé',
     'preorder.form.ctx.placeholder':'ex. Je suis sysadmin et je gère 200 postes Linux…',
     'preorder.back':'← Retour à l\'accueil',
+    // Preorder form states (JS-rendered)
+    'preorder.form.submitting':'Envoi en cours…',
+    'preorder.form.already':'Vous êtes déjà sur la liste !',
+    'preorder.form.error':'Une erreur est survenue. Veuillez réessayer.',
+    'preorder.form.network':'Erreur réseau. Vérifiez votre connexion et réessayez.',
+    'preorder.success.title':'Vous êtes sur la liste !',
+    'preorder.success.body':'Nous vous enverrons des mises à jour à',
+    'preorder.success.thanks':'Merci d\'être un partisan anticipé de Technologies Budgie.',
+    // Contact form states (JS-rendered)
+    'contact.form.submitting':'Envoi en cours…',
+    'contact.form.error':'Une erreur est survenue. Veuillez réessayer.',
+    'contact.form.network':'Erreur réseau. Vérifiez votre connexion et réessayez.',
+    'contact.success.title':'Message envoyé !',
+    'contact.success.body':'Nous vous répondrons à',
+    'contact.success.body2':'dès que possible.',
   }
 };
 
@@ -321,3 +353,10 @@ function initI18n() {
 }
 
 document.addEventListener('DOMContentLoaded', initI18n);
+
+/* ── t() helper for JS-rendered strings ─────────────────────── */
+function t(key) {
+  const lang = getCookie('tb_lang') || 'en';
+  const dict = TRANSLATIONS[lang] || TRANSLATIONS['en'];
+  return dict[key] || TRANSLATIONS['en'][key] || key;
+}

@@ -142,8 +142,8 @@
 
       <div id="preorderSuccess" style="display:none;text-align:center;padding:16px 0;">
         <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
-        <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;margin-bottom:8px;">You're on the list!</div>
-        <div style="color:var(--text-2);font-size:0.92rem;line-height:1.7;">We'll send updates to <strong id="pConfirmedEmail" style="color:var(--text-1);"></strong>.<br>Thank you for being an early supporter of Technologies Budgie.</div>
+        <div id="preorderSuccessTitle" style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;margin-bottom:8px;"></div>
+        <div style="color:var(--text-2);font-size:0.92rem;line-height:1.7;"><span id="preorderSuccessBody"></span> <strong id="pConfirmedEmail" style="color:var(--text-1);"></strong>.<br><span id="preorderSuccessThanks"></span></div>
         <a href="../../index.html" class="btn btn-outline" style="margin-top:28px;" data-i18n="preorder.back">← Back to Home</a>
       </div>
     </div>
@@ -188,7 +188,7 @@ async function handlePreorder(e) {
   const context = document.getElementById('pcontext').value.trim();
 
   btn.disabled = true;
-  btn.innerHTML = '<span>Submitting…</span>';
+  btn.innerHTML = `<span>${t('preorder.form.submitting')}</span>`;
 
   try {
     const res = await fetch(WORKER_URL, {
@@ -201,21 +201,25 @@ async function handlePreorder(e) {
 
     if (res.ok && data.ok) {
       document.getElementById('preorderForm').style.display = 'none';
-      document.getElementById('preorderSuccess').style.display = 'block';
+      const successEl = document.getElementById('preorderSuccess');
+      document.getElementById('preorderSuccessTitle').textContent = t('preorder.success.title');
+      document.getElementById('preorderSuccessBody').textContent = t('preorder.success.body');
+      document.getElementById('preorderSuccessThanks').textContent = t('preorder.success.thanks');
       document.getElementById('pConfirmedEmail').textContent = email;
+      successEl.style.display = 'block';
     } else if (res.status === 409) {
-      showFormError(btn, "You're already on the list!");
+      showFormError(btn, t('preorder.form.already'));
     } else {
-      showFormError(btn, data.error || 'Something went wrong. Please try again.');
+      showFormError(btn, data.error || t('preorder.form.error'));
     }
   } catch (err) {
-    showFormError(btn, 'Network error. Please check your connection and try again.');
+    showFormError(btn, t('preorder.form.network'));
   }
 }
 
 function showFormError(btn, msg) {
   btn.disabled = false;
-  btn.innerHTML = '<span>Reserve My Spot</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+  btn.innerHTML = `<span>${t('preorder.form.submit')}</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
   let err = document.getElementById('preorderError');
   if (!err) {
     err = document.createElement('p');

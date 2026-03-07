@@ -138,8 +138,8 @@
         </form>
         <div id="formSuccess" style="display:none;text-align:center;padding:32px;">
           <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
-          <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:8px;">Message sent!</div>
-          <div style="color:var(--text-2);font-size:0.9rem;">We'll get back to you at <strong id="confirmedEmail"></strong> as soon as we can.</div>
+          <div id="contactSuccessTitle" style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:8px;"></div>
+          <div style="color:var(--text-2);font-size:0.9rem;"><span id="contactSuccessBody"></span> <strong id="confirmedEmail"></strong> <span id="contactSuccessBody2"></span></div>
         </div>
       </div>
     </div>
@@ -171,5 +171,59 @@
 
 
 <script src="../../js/main.js"></script>
+<script>
+const CONTACT_WORKER_URL = "https://contact-worker.technologiesbudgie.workers.dev";
+
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById('submitBtn');
+  const email = document.getElementById('email').value.trim();
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value.trim();
+
+  btn.disabled = true;
+  btn.innerHTML = `<span>${t('contact.form.submitting')}</span>`;
+
+  try {
+    const res = await fetch(CONTACT_WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, fname, lname, subject, message })
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.ok) {
+      document.getElementById('contactForm').style.display = 'none';
+      const successEl = document.getElementById('formSuccess');
+      document.getElementById('contactSuccessTitle').textContent = t('contact.success.title');
+      document.getElementById('contactSuccessBody').textContent = t('contact.success.body');
+      document.getElementById('contactSuccessBody2').textContent = t('contact.success.body2');
+      document.getElementById('confirmedEmail').textContent = email;
+      successEl.style.display = 'block';
+    } else {
+      showContactError(btn, data.error || t('contact.form.error'));
+    }
+  } catch (err) {
+    showContactError(btn, t('contact.form.network'));
+  }
+}
+
+function showContactError(btn, msg) {
+  btn.disabled = false;
+  btn.innerHTML = `<span>${t('contact.form.submit')}</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>`;
+  let err = document.getElementById('contactError');
+  if (!err) {
+    err = document.createElement('p');
+    err.id = 'contactError';
+    err.style.cssText = 'color:#ff6b35;font-size:0.85rem;text-align:center;margin-top:10px;';
+    btn.parentNode.insertBefore(err, btn.nextSibling);
+  }
+  err.textContent = msg;
+}
+</script>
 </body>
 </html>
