@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technologies Budgie — Engineering the Future</title>
-  <meta name="description" content="Technologies Budgie builds enterprise software, open-source tooling, and hardware repair services. Currently in pre-order phase." />
+  <title>Technologies Budgie</title>
+  <meta name="description" content="Technologies Budgie builds open-source software, tools, and hardware solutions for individuals and organizations — from disk utilities to enterprise deployments." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -97,7 +97,7 @@
       <div class="hero__trust">
         <span data-i18n="hero.trust1">Open Source</span>
         <span class="sep">·</span>
-        <span>Enterprise Ready</span>
+        <span data-i18n="hero.trust.enterprise">Enterprise Ready</span>
         <span class="sep">·</span>
         <span data-i18n="hero.trust2">Privacy First</span>
       </div>
@@ -138,7 +138,7 @@
   </div>
 
   <div class="hero__scroll">
-    <span>Scroll</span>
+    <span data-i18n="hero.scroll">Scroll</span>
     <div class="hero__scroll-line"></div>
   </div>
 </section>
@@ -147,20 +147,20 @@
 <div class="marquee-wrap">
   <div class="marquee">
     <div class="marquee__track">
-      <span>Enterprise Software</span><span class="sep">✦</span>
-      <span>Open Source</span><span class="sep">✦</span>
-      <span>Hardware Repair</span><span class="sep">✦</span>
-      <span>Systems Tooling</span><span class="sep">✦</span>
-      <span>Cross-Platform Apps</span><span class="sep">✦</span>
-      <span>Cloud Infrastructure</span><span class="sep">✦</span>
-      <span>Developer Tools</span><span class="sep">✦</span>
-      <span>Enterprise Software</span><span class="sep">✦</span>
-      <span>Open Source</span><span class="sep">✦</span>
-      <span>Hardware Repair</span><span class="sep">✦</span>
-      <span>Systems Tooling</span><span class="sep">✦</span>
-      <span>Cross-Platform Apps</span><span class="sep">✦</span>
-      <span>Cloud Infrastructure</span><span class="sep">✦</span>
-      <span>Developer Tools</span><span class="sep">✦</span>
+      <span data-i18n="marquee.enterprise">Enterprise Software</span><span class="sep">✦</span>
+      <span data-i18n="marquee.opensource">Open Source</span><span class="sep">✦</span>
+      <span data-i18n="marquee.repair">Hardware Repair</span><span class="sep">✦</span>
+      <span data-i18n="marquee.systems">Systems Tooling</span><span class="sep">✦</span>
+      <span data-i18n="marquee.crossplat">Cross-Platform Apps</span><span class="sep">✦</span>
+      <span data-i18n="marquee.cloud">Cloud Infrastructure</span><span class="sep">✦</span>
+      <span data-i18n="marquee.devtools">Developer Tools</span><span class="sep">✦</span>
+      <span data-i18n="marquee.enterprise">Enterprise Software</span><span class="sep">✦</span>
+      <span data-i18n="marquee.opensource">Open Source</span><span class="sep">✦</span>
+      <span data-i18n="marquee.repair">Hardware Repair</span><span class="sep">✦</span>
+      <span data-i18n="marquee.systems">Systems Tooling</span><span class="sep">✦</span>
+      <span data-i18n="marquee.crossplat">Cross-Platform Apps</span><span class="sep">✦</span>
+      <span data-i18n="marquee.cloud">Cloud Infrastructure</span><span class="sep">✦</span>
+      <span data-i18n="marquee.devtools">Developer Tools</span><span class="sep">✦</span>
     </div>
   </div>
 </div>
@@ -207,7 +207,7 @@
         </div>
         <div class="card__title" data-i18n="card4.title">Systems &amp; Developer Tools</div>
         <div class="card__body" data-i18n="card4.body">Low-level utilities and developer tooling. Currently shipping DiskParted, with LogDock and Forge Suite in the pipeline.</div>
-        <div class="badge badge--blue" style="margin-top:20px;"><span class="dot"></span> Shipping</div>
+        <div class="badge badge--blue" style="margin-top:20px;"><span class="dot"></span> <span data-i18n="badge.shipping">Shipping</span></div>
       </div>
       <div class="card reveal reveal-delay-2">
         <div class="card__icon" style="background:rgba(0,229,160,0.12);color:#00e5a0;">
@@ -246,13 +246,13 @@
         </p>
         <ul class="featured__pills">
           <li>Rust</li>
-          <li>Cross-platform</li>
+          <li>GNU/Linux</li>
           <li>GPT / MBR</li>
           <li>GPLv3</li>
         </ul>
         <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;">
           <a href="pages/products/index.html" class="btn btn-primary" data-i18n="featured.cta1">Learn More</a>
-          <a href="https://codeberg.org/TechnologiesBudgie/diskparted/" class="btn btn-outline" data-i18n="featured.cta2">View on Codeberg</a>
+          <a href="https://codeberg.org/TechnologiesBudgie/diskparted/" class="btn btn-outline" data-i18n="featured.cta2">View source code</a>
         </div>
       </div>
       <div class="featured__visual reveal reveal-delay-2">
@@ -333,7 +333,7 @@
         <p data-i18n="footer.desc">Engineering robust, open, and user-centric technology solutions — from embedded systems to cloud services.</p>
         <a href="mailto:budgie@mailfence.com" style="color:var(--accent);font-size:0.85rem;margin-top:12px;display:inline-block;">budgie@mailfence.com</a>
         <a href="https://codeberg.org/TechnologiesBudgie" target="_blank" rel="noopener" style="color:var(--text-3);font-size:0.82rem;margin-top:8px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--text-1)'" onmouseout="this.style.color='var(--text-3)'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9996 1C5.9246 1 1 5.9253 1 12.0007C1 16.8578 4.0324 20.9805 8.3133 22.4602C8.3133 22.4602 8.5588 22.5173 8.6721 22.4031C8.7902 22.2843 8.7501 22.1028 8.7501 22.1028C8.7501 22.1028 8.6721 21.4884 8.6721 20.6258C5.5606 21.3232 4.9337 19.2089 4.9337 19.2089C4.4148 17.921 3.6754 17.5714 3.6754 17.5714C2.6538 16.8573 3.7533 16.8718 3.7533 16.8718C4.8809 16.9501 5.4753 18.0297 5.4753 18.0297C6.4803 19.7428 8.1441 19.2317 8.7992 18.9394C8.8987 18.2012 9.1913 17.6915 9.5143 17.4027C6.9614 17.1097 4.2778 16.1173 4.2778 11.7085C4.2778 10.4899 4.7248 9.4957 5.4993 8.7209C5.3846 8.4294 4.9909 7.2905 5.607 5.7477C5.607 5.7477 6.5535 5.4373 8.7469 6.8827C9.6741 6.6267 10.6708 6.4986 11.6618 6.4939C12.6527 6.4986 13.6496 6.6267 14.5769 6.8827C16.7692 5.4373 17.7146 5.7477 17.7146 5.7477C18.3318 7.2905 17.9379 8.4294 17.8232 8.7209C18.5989 9.4957 19.0437 10.4899 19.0437 11.7085C19.0437 16.1272 16.3557 17.1063 13.7953 17.3929C14.2028 17.7491 14.5648 18.4517 14.5648 19.5197C14.5648 21.0625 14.5502 22.1028 14.5502 22.1028C14.5502 22.1028 14.5091 22.2868 14.6283 22.4064C14.7428 22.5219 14.9916 22.4602 14.9916 22.4602C19.2638 20.9748 22.2897 16.8557 22.2897 12.0007C22.2897 5.9253 17.3653 1 11.9996 1Z"/></svg>
+          <img src="images/codeberg-logo.svg" width="14" height="14" alt="Codeberg" style="opacity:0.85;vertical-align:middle;filter:brightness(0) invert(1);">
           Codeberg
         </a>
       </div>
@@ -359,9 +359,9 @@
         <h4 data-i18n="footer.services">Services</h4>
         <ul>
           <li><a href="pages/services/index.html" data-i18n="footer.all-services">All Services</a></li>
-          <li><a href="pages/services/index.html#repair">Hardware Repair</a></li>
-          <li><a href="pages/services/index.html#support">Enterprise Support</a></li>
-          <li><a href="pages/services/index.html#consulting">Consulting</a></li>
+          <li><a href="pages/services/index.html#repair" data-i18n="footer.repair">Hardware Repair</a></li>
+          <li><a href="pages/services/index.html#support" data-i18n="footer.support">Enterprise Support</a></li>
+          <li><a href="pages/services/index.html#consulting" data-i18n="footer.consulting">Consulting</a></li>
         </ul>
       </div>
     </div>

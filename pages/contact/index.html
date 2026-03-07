@@ -66,7 +66,7 @@
           <div class="contact-info__icon">📧</div>
           <div>
             <div class="contact-info__label" data-i18n="contact.info.email">Email</div>
-            <div class="contact-info__val"><a href="/cdn-cgi/l/email-protection#0c6e79686b65694c616d65606a69626f69226f6361"><span class="__cf_email__" data-cfemail="88eafdecefe1edc8e5e9e1e4eeede6ebeda6ebe7e5">[email&#160;protected]</span></a></div>
+            <div class="contact-info__val"><a href="mailto:budgie@mailfence.com">budgie@mailfence.com</a></div>
           </div>
         </div>
         <div class="contact-info__item">
@@ -91,7 +91,7 @@
           </div>
         </div>
         <div style="margin-top:40px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);">
-          <div class="badge badge--orange" style="margin-bottom:14px;"><span class="dot"></span> Pre-order Phase</div>
+          <div class="badge badge--orange" style="margin-bottom:14px;"><span class="dot"></span> <span data-i18n="badge.preorder">Pre-order Phase</span></div>
           <p style="color:var(--text-2);font-size:0.9rem;line-height:1.75;" data-i18n="contact.phase.body">We're currently in our market study and pre-order phase. Your message helps us understand what to build first.</p>
           <a href="../preorder/index.html" class="btn btn-primary" style="margin-top:20px;font-size:0.85rem;padding:10px 22px;" data-i18n="contact.phase.cta">Join the Waitlist →</a>
         </div>
@@ -118,18 +118,18 @@
           <div class="form-group">
             <label class="form-label" for="subject" data-i18n="contact.form.subject">Subject</label>
             <select class="form-select" id="subject" required>
-              <option value="" disabled selected>Select a topic…</option>
-              <option>Hardware Repair</option>
-              <option>Enterprise Software</option>
-              <option>Open Source / Products</option>
-              <option>Partnership</option>
-              <option>Pre-order</option>
-              <option>General Inquiry</option>
+              <option value="" disabled selected data-i18n="contact.form.select.placeholder">Select a topic…</option>
+              <option data-i18n="contact.form.opt1">Hardware Repair</option>
+              <option data-i18n="contact.form.opt2">Enterprise Software</option>
+              <option data-i18n="contact.form.opt3">Open Source / Products</option>
+              <option data-i18n="contact.form.opt4">Partnership</option>
+              <option data-i18n="contact.form.opt5">Pre-order</option>
+              <option data-i18n="contact.form.opt6">General Inquiry</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label" for="message" data-i18n="contact.form.message">Message</label>
-            <textarea class="form-textarea" id="message" placeholder="Tell us about your project or question…" required></textarea>
+            <textarea class="form-textarea" id="message" data-i18n="contact.form.msg.placeholder" placeholder="Tell us about your project or question…" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" id="submitBtn">
             <span data-i18n="contact.form.submit">Send Message</span>
@@ -139,7 +139,7 @@
         <div id="formSuccess" style="display:none;text-align:center;padding:32px;">
           <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
           <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:8px;">Message sent!</div>
-          <div style="color:var(--text-2);font-size:0.9rem;">We'll get back to you at <strong id="confirmedEmail"></strong> within 24 hours.</div>
+          <div style="color:var(--text-2);font-size:0.9rem;">We'll get back to you at <strong id="confirmedEmail"></strong> as soon as we can.</div>
         </div>
       </div>
     </div>
@@ -152,9 +152,9 @@
       <div class="footer__brand">
         <a href="../../index.html" class="nav__logo"><div class="nav__logo-mark">TB</div><div class="nav__logo-name">Technologies Budgie</div></a>
         <p data-i18n="footer.desc">Engineering robust, open, and user-centric technology solutions.</p>
-        <a href="/cdn-cgi/l/email-protection#91f3e4f5f6f8f4d1fcf0f8fdf7f4fff2f4bff2fefc" style="color:var(--accent);font-size:0.85rem;margin-top:12px;display:inline-block;"><span class="__cf_email__" data-cfemail="4c2e39282b25290c212d25202a29222f29622f2321">[email&#160;protected]</span></a>
+        <a href="mailto:budgie@mailfence.com" style="color:var(--accent);font-size:0.85rem;margin-top:12px;display:inline-block;">budgie@mailfence.com</a>
         <a href="https://codeberg.org/TechnologiesBudgie" target="_blank" rel="noopener" style="color:var(--text-3);font-size:0.82rem;margin-top:8px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--text-1)'" onmouseout="this.style.color='var(--text-3)'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9996 1C5.9246 1 1 5.9253 1 12.0007C1 16.8578 4.0324 20.9805 8.3133 22.4602C8.3133 22.4602 8.5588 22.5173 8.6721 22.4031C8.7902 22.2843 8.7501 22.1028 8.7501 22.1028C8.7501 22.1028 8.6721 21.4884 8.6721 20.6258C5.5606 21.3232 4.9337 19.2089 4.9337 19.2089C4.4148 17.921 3.6754 17.5714 3.6754 17.5714C2.6538 16.8573 3.7533 16.8718 3.7533 16.8718C4.8809 16.9501 5.4753 18.0297 5.4753 18.0297C6.4803 19.7428 8.1441 19.2317 8.7992 18.9394C8.8987 18.2012 9.1913 17.6915 9.5143 17.4027C6.9614 17.1097 4.2778 16.1173 4.2778 11.7085C4.2778 10.4899 4.7248 9.4957 5.4993 8.7209C5.3846 8.4294 4.9909 7.2905 5.607 5.7477C5.607 5.7477 6.5535 5.4373 8.7469 6.8827C9.6741 6.6267 10.6708 6.4986 11.6618 6.4939C12.6527 6.4986 13.6496 6.6267 14.5769 6.8827C16.7692 5.4373 17.7146 5.7477 17.7146 5.7477C18.3318 7.2905 17.9379 8.4294 17.8232 8.7209C18.5989 9.4957 19.0437 10.4899 19.0437 11.7085C19.0437 16.1272 16.3557 17.1063 13.7953 17.3929C14.2028 17.7491 14.5648 18.4517 14.5648 19.5197C14.5648 21.0625 14.5502 22.1028 14.5502 22.1028C14.5502 22.1028 14.5091 22.2868 14.6283 22.4064C14.7428 22.5219 14.9916 22.4602 14.9916 22.4602C19.2638 20.9748 22.2897 16.8557 22.2897 12.0007C22.2897 5.9253 17.3653 1 11.9996 1Z"/></svg>
+          <img src="../../images/codeberg-logo.svg" width="14" height="14" alt="Codeberg" style="opacity:0.85;vertical-align:middle;filter:brightness(0) invert(1);">
           Codeberg
         </a>
       </div>
