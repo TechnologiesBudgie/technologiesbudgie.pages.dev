@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Technologies Budgie</title>
+  <meta name="description" content="Explore Technologies Budgie's software and hardware products. From USB flashing utilities to enterprise-grade software suites." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/page.css" />
+  <script src="../../js/i18n.js" defer></script>
+  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="../../index.html" class="nav__logo">
+        <div class="nav__logo-mark">TB</div>
+        <div class="nav__logo-name">Technologies Budgie<span class="nav__logo-sub">Est. 2024</span></div>
+      </a>
+      <ul class="nav__links">
+        <li><a href="../../index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html" class="nav__link active" data-i18n="nav.products">Products</a></li>
+        <li><a href="../services/index.html" class="nav__link" data-i18n="nav.services">Services</a></li>
+        <li><a href="../about/index.html" class="nav__link" data-i18n="nav.about">About</a></li>
+        <li><a href="../contact/index.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button id="lang-toggle" aria-label="Switch language">FR</button>
+        <a href="../preorder/index.html" class="btn btn-primary" data-i18n="nav.preorder">Pre-order</a>
+        <button class="nav__hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav__mobile">
+  <button class="nav__mobile-close">✕</button>
+  <a href="../../index.html" class="nav__link" data-i18n="nav.home">Home</a>
+  <a href="index.html" class="nav__link" data-i18n="nav.products">Products</a>
+  <a href="../services/index.html" class="nav__link" data-i18n="nav.services">Services</a>
+  <a href="../about/index.html" class="nav__link" data-i18n="nav.about">About</a>
+  <a href="../contact/index.html" class="nav__link" data-i18n="nav.contact">Contact</a>
+  <a href="../preorder/index.html" class="btn btn-primary" style="margin-top:24px;" data-i18n="nav.preorder">Pre-order</a>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero__bg">
+    <div class="page-hero__orb"></div>
+  </div>
+  <div class="container page-hero__inner">
+    <div class="label reveal" data-i18n="products.hero.label">Our Products</div>
+    <h1 class="display-lg reveal reveal-delay-1" style="margin-top:12px;">
+      <span data-i18n="products.hero.title">Built to last.</span><br><span class="grad-text" data-i18n="products.hero.title2">Open by default.</span>
+    </h1>
+    <p class="reveal reveal-delay-2" style="color:var(--text-2);font-size:1.05rem;max-width:520px;margin-top:16px;line-height:1.8;">
+      <span data-i18n="products.hero.sub">Every product we build starts from a real need. No bloat, no lock-in — just software and tools that work.</span>
+    </p>
+  </div>
+</section>
+
+<!-- Products Grid -->
+<section class="section">
+  <div class="container">
+
+    <!-- DiskParted -->
+    <div class="product-card reveal" id="diskparted">
+      <div class="product-card__header">
+        <div class="product-card__icon" style="font-size:1.4rem;">D</div>
+        <div>
+          <div class="product-card__name">DiskParted</div>
+          <div class="product-card__tagline" data-i18n="products.dp.tagline">Disk partitioning and management utility</div>
+        </div>
+        <div class="badge badge--green" style="margin-left:auto;"><span class="dot"></span> <span data-i18n="products.dp.badge">Available</span></div>
+      </div>
+      <div class="product-card__body">
+        <p data-i18n="products.dp.body">A modern, open-source disk partitioning and management utility designed for everyone — from power users to those who just need a clean interface to manage their drives. Full GPT and MBR support, UEFI-aware, cross-platform. No telemetry, no lock-in. Licensed under GPLv3.</p>
+        <div class="product-card__specs">
+          <div class="spec"><span class="spec__key">License</span><span class="spec__val">GPLv3</span></div>
+          <div class="spec"><span class="spec__key">Type</span><span class="spec__val">FOSS</span></div>
+          <div class="spec"><span class="spec__key">Partitioning</span><span class="spec__val">GPT + MBR</span></div>
+          <div class="spec"><span class="spec__key">Platforms</span><span class="spec__val">Linux, Windows, macOS</span></div>
+        </div>
+        <div class="product-card__actions">
+          <a href="https://codeberg.org/TechnologiesBudgie/diskparted/" class="btn btn-primary" data-i18n="products.dp.cta1">View on Codeberg</a>
+          <a href="../preorder/index.html" class="btn btn-outline" data-i18n="products.dp.cta2">Get Notified of Updates</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LogDock -->
+    <div class="product-card reveal" id="logdock">
+      <div class="product-card__header">
+        <div class="product-card__icon" style="font-size:1.4rem;">L</div>
+        <div>
+          <div class="product-card__name">LogDock</div>
+          <div class="product-card__tagline" data-i18n="products.ld.tagline">Structured log management and viewer</div>
+        </div>
+        <div class="badge badge--blue" style="margin-left:auto;" data-i18n="products.ld.badge">In Development</div>
+      </div>
+      <div class="product-card__body">
+        <p data-i18n="products.ld.body">LogDock is a structured log management and viewer for developers, sysadmins, and power users. Real-time log tailing, filtering, and search across local files and remote sources — with a clean, fast interface built for daily use. For individuals who hate grepping through walls of text, and for teams who need better visibility into their systems.</p>
+        <div class="product-card__specs">
+          <div class="spec"><span class="spec__key">Audience</span><span class="spec__val">Developers + Sysadmins</span></div>
+          <div class="spec"><span class="spec__key">Type</span><span class="spec__val">Desktop App</span></div>
+          <div class="spec"><span class="spec__key">Status</span><span class="spec__val">Design &amp; Development</span></div>
+        </div>
+        <div class="product-card__actions">
+          <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.ld.cta1">Join Waitlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forge Suite -->
+    <div class="product-card reveal" id="forge">
+      <div class="product-card__header">
+        <div class="product-card__icon" style="font-size:1.4rem;">F</div>
+        <div>
+          <div class="product-card__name">Forge Suite</div>
+          <div class="product-card__tagline" data-i18n="products.fs.tagline">Developer and productivity toolkit</div>
+        </div>
+        <div class="badge badge--blue" style="margin-left:auto;">In Development</div>
+      </div>
+      <div class="product-card__body">
+        <p data-i18n="products.fs.body">Forge Suite is a developer and productivity toolkit — a cohesive set of tools that work together or standalone. More details coming as development progresses. Built for people who work in and around software, regardless of role or team size.</p>
+        <div class="product-card__specs">
+          <div class="spec"><span class="spec__key">Status</span><span class="spec__val">Early Design Phase</span></div>
+          <div class="spec"><span class="spec__key">Audience</span><span class="spec__val">Developers + Teams</span></div>
+        </div>
+        <div class="product-card__actions">
+          <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.fs.cta1">Join Waitlist</a>
+          <a href="../contact/index.html" class="btn btn-outline" data-i18n="products.fs.cta2">Express Interest</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hardware -->
+    <div class="product-card reveal" id="hardware">
+      <div class="product-card__header">
+        <div class="product-card__icon" style="font-size:1.4rem;">H</div>
+        <div>
+          <div class="product-card__name">Hardware Products</div>
+          <div class="product-card__tagline" data-i18n="products.hw.tagline">In-house hardware — on the roadmap</div>
+        </div>
+        <div class="badge badge--orange" style="margin-left:auto;" data-i18n="products.hw.badge">Roadmap</div>
+      </div>
+      <div class="product-card__body">
+        <p data-i18n="products.hw.body">Technologies Budgie is developing proprietary hardware products for both personal and professional use. Details will be announced in a future phase. Join the waitlist to be among the first to know.</p>
+        <div class="product-card__actions">
+          <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.hw.cta1">Get Notified</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="../../index.html" class="nav__logo">
+          <div class="nav__logo-mark">TB</div>
+          <div class="nav__logo-name">Technologies Budgie</div>
+        </a>
+        <p data-i18n="footer.desc">Engineering robust, open, and user-centric technology solutions.</p>
+        <a href="/cdn-cgi/l/email-protection#6c0e19080b05092c010d05000a09020f09420f0301" style="color:var(--accent);font-size:0.85rem;margin-top:12px;display:inline-block;"><span class="__cf_email__" data-cfemail="8fedfaebe8e6eacfe2eee6e3e9eae1eceaa1ece0e2">[email&#160;protected]</span></a>
+        <a href="https://codeberg.org/TechnologiesBudgie" target="_blank" rel="noopener" style="color:var(--text-3);font-size:0.82rem;margin-top:8px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--text-1)'" onmouseout="this.style.color='var(--text-3)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9996 1C5.9246 1 1 5.9253 1 12.0007C1 16.8578 4.0324 20.9805 8.3133 22.4602C8.3133 22.4602 8.5588 22.5173 8.6721 22.4031C8.7902 22.2843 8.7501 22.1028 8.7501 22.1028C8.7501 22.1028 8.6721 21.4884 8.6721 20.6258C5.5606 21.3232 4.9337 19.2089 4.9337 19.2089C4.4148 17.921 3.6754 17.5714 3.6754 17.5714C2.6538 16.8573 3.7533 16.8718 3.7533 16.8718C4.8809 16.9501 5.4753 18.0297 5.4753 18.0297C6.4803 19.7428 8.1441 19.2317 8.7992 18.9394C8.8987 18.2012 9.1913 17.6915 9.5143 17.4027C6.9614 17.1097 4.2778 16.1173 4.2778 11.7085C4.2778 10.4899 4.7248 9.4957 5.4993 8.7209C5.3846 8.4294 4.9909 7.2905 5.607 5.7477C5.607 5.7477 6.5535 5.4373 8.7469 6.8827C9.6741 6.6267 10.6708 6.4986 11.6618 6.4939C12.6527 6.4986 13.6496 6.6267 14.5769 6.8827C16.7692 5.4373 17.7146 5.7477 17.7146 5.7477C18.3318 7.2905 17.9379 8.4294 17.8232 8.7209C18.5989 9.4957 19.0437 10.4899 19.0437 11.7085C19.0437 16.1272 16.3557 17.1063 13.7953 17.3929C14.2028 17.7491 14.5648 18.4517 14.5648 19.5197C14.5648 21.0625 14.5502 22.1028 14.5502 22.1028C14.5502 22.1028 14.5091 22.2868 14.6283 22.4064C14.7428 22.5219 14.9916 22.4602 14.9916 22.4602C19.2638 20.9748 22.2897 16.8557 22.2897 12.0007C22.2897 5.9253 17.3653 1 11.9996 1Z"/></svg>
+          Codeberg
+        </a>
+      </div>
+      <div class="footer__col"><h4 data-i18n="footer.company">Company</h4><ul>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
+      </ul></div>
+      <div class="footer__col"><h4 data-i18n="footer.products">Products</h4><ul>
+        <li><a href="#diskparted">DiskParted</a></li>
+        <li><a href="#logdock">LogDock</a></li>
+        <li><a href="#forge">Forge Suite</a></li>
+        <li><a href="../preorder/index.html" data-i18n="footer.preorder">Pre-order</a></li>
+      </ul></div>
+      <div class="footer__col"><h4 data-i18n="footer.services">Services</h4><ul>
+        <li><a href="../services/index.html" data-i18n="footer.all-services">All Services</a></li>
+        <li><a href="../services/index.html#repair" data-i18n="footer.repair">Hardware Repair</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span data-i18n="footer.copy">© 2024 Technologies Budgie. All rights reserved.</span>
+      <div class="footer__bottom-links"><a href="#" data-i18n="footer.privacy">Privacy</a><a href="#" data-i18n="footer.terms">Terms</a><a href="#" data-i18n="footer.opensource">Open Source</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+</body>
+</html>

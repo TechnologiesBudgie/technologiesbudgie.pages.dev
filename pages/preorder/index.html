@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-order — Technologies Budgie</title>
+  <meta name="description" content="Join the Technologies Budgie waitlist. Early access, exclusive pricing, and direct input into what we build." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/page.css" />
+  <script src="../../js/i18n.js" defer></script>
+  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav__inner">
+    <a href="../../index.html" class="nav__logo">
+      <div class="nav__logo-mark">TB</div>
+      <div class="nav__logo-name">Technologies Budgie<span class="nav__logo-sub">Est. 2024</span></div>
+    </a>
+    <ul class="nav__links">
+      <li><a href="../../index.html" class="nav__link" data-i18n="nav.home">Home</a></li>
+      <li><a href="../products/index.html" class="nav__link" data-i18n="nav.products">Products</a></li>
+      <li><a href="../services/index.html" class="nav__link" data-i18n="nav.services">Services</a></li>
+      <li><a href="../about/index.html" class="nav__link" data-i18n="nav.about">About</a></li>
+      <li><a href="../contact/index.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+        <button id="lang-toggle" aria-label="Switch language">FR</button>
+      <a href="index.html" class="btn btn-primary" data-i18n="nav.preorder">Pre-order</a>
+      <button class="nav__hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div></div>
+</nav>
+<div class="nav__mobile">
+  <button class="nav__mobile-close">✕</button>
+  <a href="../../index.html" class="nav__link" data-i18n="nav.home">Home</a>
+  <a href="../products/index.html" class="nav__link" data-i18n="nav.products">Products</a>
+  <a href="../services/index.html" class="nav__link" data-i18n="nav.services">Services</a>
+  <a href="../about/index.html" class="nav__link" data-i18n="nav.about">About</a>
+  <a href="../contact/index.html" class="nav__link" data-i18n="nav.contact">Contact</a>
+</div>
+
+<!-- Hero -->
+<section class="page-hero" style="text-align:center;padding-bottom:40px;">
+  <div class="page-hero__bg">
+    <div class="page-hero__orb" style="left:50%;top:-100px;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(circle,rgba(255,107,53,0.12),transparent 70%);"></div>
+  </div>
+  <div class="container page-hero__inner">
+    <div class="preorder-hero-wrap">
+      <div class="status-pill" style="margin:0 auto 24px;" >
+        <span class="dot"></span>
+        <span data-i18n="preorder.status">Limited Early Access</span>
+      </div>
+      <h1 class="display-lg reveal" style="margin-bottom:20px;">
+        <span data-i18n="preorder.title1">Be first.</span><br><span class="grad-text-warm" data-i18n="preorder.title2">Shape what we build.</span>
+      </h1>
+      <p class="reveal reveal-delay-1" style="color:var(--text-2);font-size:1.05rem;line-height:1.85;">
+        <span data-i18n="preorder.sub">Join the Technologies Budgie waitlist during our pre-order phase. Early members get priority access, exclusive pricing, and a direct line to our product roadmap.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="section--sm">
+  <div class="container">
+    <div class="preorder-features">
+      <div class="pf-card reveal">
+        <div class="pf-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00c8ff" stroke-width="1.8" style="margin:0 auto;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="pf-card__title" data-i18n="preorder.f1.title">Priority Access</div>
+        <div class="pf-card__body" data-i18n="preorder.f1.body">First in line when products launch. No waiting, no queues — you get access before the public.</div>
+      </div>
+      <div class="pf-card reveal reveal-delay-1">
+        <div class="pf-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00e5a0" stroke-width="1.8" style="margin:0 auto;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="pf-card__title" data-i18n="preorder.f2.title">Early Pricing</div>
+        <div class="pf-card__body" data-i18n="preorder.f2.body">Pre-order members lock in launch-day pricing. No price increases once you're in.</div>
+      </div>
+      <div class="pf-card reveal reveal-delay-2">
+        <div class="pf-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.8" style="margin:0 auto;"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <div class="pf-card__title" data-i18n="preorder.f3.title">Shape the Product</div>
+        <div class="pf-card__body" data-i18n="preorder.f3.body">Your feedback directly influences what we prioritize. This is a real market study — your voice matters.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="section--sm" style="padding-bottom:120px;">
+  <div class="container">
+    <div class="preorder-form-wrap reveal">
+      <h2 data-i18n="preorder.form.title">Join the Waitlist</h2>
+      <p data-i18n="preorder.form.sub">No payment required. We'll notify you with updates and give you early access when we're ready.</p>
+
+      <form id="preorderForm" onsubmit="handlePreorder(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="pfname" data-i18n="preorder.form.fname">First Name</label>
+            <input class="form-input" type="text" id="pfname" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="plname" data-i18n="preorder.form.lname">Last Name</label>
+            <input class="form-input" type="text" id="plname" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="pemail" data-i18n="preorder.form.email">Email Address</label>
+          <input class="form-input" type="email" id="pemail" placeholder="janedoe@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ptype" data-i18n="preorder.form.interest">I'm interested in…</label>
+          <select class="form-select" id="ptype" required>
+            <option value="" disabled selected>Select one…</option>
+              <option>DiskParted (available now)</option>
+              <option>LogDock (in development)</option>
+              <option>Forge Suite (in development)</option>
+              <option>Hardware Repair Services</option>
+              <option>Hardware Products (roadmap)</option>
+              <option>Cloud / Infrastructure (roadmap)</option>
+              <option>Everything — keep me posted</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="pcontext" data-i18n="preorder.form.context">Tell us about your use case (optional)</label>
+          <textarea class="form-textarea" id="pcontext" placeholder="e.g. I'm a sysadmin managing 200 Linux workstations and need reliable tooling…" style="min-height:90px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#ff6b35,#ff9a5c);box-shadow:0 0 32px rgba(255,107,53,0.3);" id="preorderBtn">
+          <span data-i18n="preorder.form.submit">Reserve My Spot</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </button>
+        <p style="text-align:center;color:var(--text-3);font-size:0.78rem;margin-top:14px;" data-i18n="preorder.form.note">No spam. No payment. Unsubscribe any time.</p>
+      </form>
+
+      <div id="preorderSuccess" style="display:none;text-align:center;padding:16px 0;">
+        <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
+        <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;margin-bottom:8px;">You're on the list!</div>
+        <div style="color:var(--text-2);font-size:0.92rem;line-height:1.7;">We'll send updates to <strong id="pConfirmedEmail" style="color:var(--text-1);"></strong>.<br>Thank you for being an early supporter of Technologies Budgie.</div>
+        <a href="../../index.html" class="btn btn-outline" style="margin-top:28px;">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="../../index.html" class="nav__logo"><div class="nav__logo-mark">TB</div><div class="nav__logo-name">Technologies Budgie</div></a>
+        <p data-i18n="footer.desc">Engineering robust, open, and user-centric technology solutions.</p>
+        <a href="/cdn-cgi/l/email-protection#8ceef9e8ebe5e9cce1ede5e0eae9e2efe9a2efe3e1" style="color:var(--accent);font-size:0.85rem;margin-top:12px;display:inline-block;"><span class="__cf_email__" data-cfemail="03617667646a66436e626a6f65666d60662d606c6e">[email&#160;protected]</span></a>
+        <a href="https://codeberg.org/TechnologiesBudgie" target="_blank" rel="noopener" style="color:var(--text-3);font-size:0.82rem;margin-top:8px;display:inline-flex;align-items:center;gap:6px;transition:color 0.2s;" onmouseover="this.style.color='var(--text-1)'" onmouseout="this.style.color='var(--text-3)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9996 1C5.9246 1 1 5.9253 1 12.0007C1 16.8578 4.0324 20.9805 8.3133 22.4602C8.3133 22.4602 8.5588 22.5173 8.6721 22.4031C8.7902 22.2843 8.7501 22.1028 8.7501 22.1028C8.7501 22.1028 8.6721 21.4884 8.6721 20.6258C5.5606 21.3232 4.9337 19.2089 4.9337 19.2089C4.4148 17.921 3.6754 17.5714 3.6754 17.5714C2.6538 16.8573 3.7533 16.8718 3.7533 16.8718C4.8809 16.9501 5.4753 18.0297 5.4753 18.0297C6.4803 19.7428 8.1441 19.2317 8.7992 18.9394C8.8987 18.2012 9.1913 17.6915 9.5143 17.4027C6.9614 17.1097 4.2778 16.1173 4.2778 11.7085C4.2778 10.4899 4.7248 9.4957 5.4993 8.7209C5.3846 8.4294 4.9909 7.2905 5.607 5.7477C5.607 5.7477 6.5535 5.4373 8.7469 6.8827C9.6741 6.6267 10.6708 6.4986 11.6618 6.4939C12.6527 6.4986 13.6496 6.6267 14.5769 6.8827C16.7692 5.4373 17.7146 5.7477 17.7146 5.7477C18.3318 7.2905 17.9379 8.4294 17.8232 8.7209C18.5989 9.4957 19.0437 10.4899 19.0437 11.7085C19.0437 16.1272 16.3557 17.1063 13.7953 17.3929C14.2028 17.7491 14.5648 18.4517 14.5648 19.5197C14.5648 21.0625 14.5502 22.1028 14.5502 22.1028C14.5502 22.1028 14.5091 22.2868 14.6283 22.4064C14.7428 22.5219 14.9916 22.4602 14.9916 22.4602C19.2638 20.9748 22.2897 16.8557 22.2897 12.0007C22.2897 5.9253 17.3653 1 11.9996 1Z"/></svg>
+          Codeberg
+        </a>
+      </div>
+      <div class="footer__col"><h4 data-i18n="footer.company">Company</h4><ul><li><a href="../about/index.html" data-i18n="footer.about">About</a></li><li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li></ul></div>
+      <div class="footer__col"><h4 data-i18n="footer.products">Products</h4><ul><li><a href="../products/index.html" data-i18n="footer.all-products">All Products</a></li></ul></div>
+      <div class="footer__col"><h4 data-i18n="footer.services">Services</h4><ul><li><a href="../services/index.html" data-i18n="footer.all-services">All Services</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span data-i18n="footer.copy">© 2024 Technologies Budgie. All rights reserved.</span>
+      <div class="footer__bottom-links"><a href="#" data-i18n="footer.privacy">Privacy</a><a href="#" data-i18n="footer.terms">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/main.js"></script>
+<script>
+function handlePreorder(e) {
+  e.preventDefault();
+  const email = document.getElementById('preorder-email').value;
+  document.getElementById('preorder-form').style.display = 'none';
+  document.getElementById('preorder-success').style.display = 'block';
+  document.getElementById('preorder-confirm-email').textContent = email;
+}
+</script>
+</body>
+</html>
