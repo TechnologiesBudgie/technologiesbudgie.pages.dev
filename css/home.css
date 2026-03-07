@@ -115,23 +115,18 @@
   flex-direction: column;
   gap: 3px;
   flex: 1;
-  min-width: 0;
   padding-right: 8px;
 }
 .hero__metric-val {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 800;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .hero__metric-key {
   font-size: 0.67rem;
   color: var(--text-3);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .hero__chart {
   display: flex;
