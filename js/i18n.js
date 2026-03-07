@@ -101,7 +101,7 @@ const TRANSLATIONS = {
   fr: {
     'nav.home':'Accueil','nav.products':'Produits','nav.services':'Services','nav.about':'À propos','nav.contact':'Contact','nav.preorder':'Précommande',
     'hero.status':'Phase de précommande — rejoignez la liste d\'attente','hero.title1':'Nous Construisons','hero.title2':'Ce Qui Compte.',
-    'hero.sub':'Technologies Budgie développe des logiciels, des outils et des solutions matérielles pour les particuliers et les organisations. Des utilitaires disque aux déploiements d\'entreprise — nous couvrons toute la pile.',
+    'hero.sub':'Technologies Budgie développe des logiciels, des outils et des solutions matérielles pour les particuliers et les organisations. Des utilitaires disque aux déploiements d\'entreprise — nous couvrons tout!',
     'hero.cta1':'Réserver une place','hero.cta2':'Voir les produits','hero.trust1':'Open Source','hero.trust2':'Respect de la vie privée','hero.trust3':'Construit pour durer',
     'section.what':'Ce que nous faisons','what.title':'Une entreprise technologique complète.',
     'what.sub':'De la réparation de votre matériel au développement de logiciels à grande échelle — Technologies Budgie couvre l\'ensemble du cycle de vie technologique pour les particuliers et les entreprises.',
