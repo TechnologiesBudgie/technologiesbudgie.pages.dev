@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../css/styles.css" />
   <link rel="stylesheet" href="../../css/page.css" />
   <script src="../../js/i18n.js" defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -133,6 +134,7 @@
           <label class="form-label" for="pcontext" data-i18n="preorder.form.context">Tell us about your use case (optional)</label>
           <textarea class="form-textarea" id="pcontext" data-i18n="preorder.form.ctx.placeholder" placeholder="e.g. I'm a sysadmin managing 200 Linux workstations and need reliable tooling…" style="min-height:90px;"></textarea>
         </div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAACoByv73yCOFfusb" data-theme="dark" style="margin-bottom:16px;"></div>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:linear-gradient(135deg,#ff6b35,#ff9a5c);box-shadow:0 0 32px rgba(255,107,53,0.3);" id="preorderBtn">
           <span data-i18n="preorder.form.submit">Reserve My Spot</span>
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -194,7 +196,7 @@ async function handlePreorder(e) {
     const res = await fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, fname, lname, interest, context })
+      body: JSON.stringify({ email, fname, lname, interest, context, turnstileToken: document.querySelector('[name="cf-turnstile-response"]')?.value || "" })
     });
 
     const data = await res.json();
