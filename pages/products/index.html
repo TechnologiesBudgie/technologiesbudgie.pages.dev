@@ -80,10 +80,10 @@
       <div class="product-card__body">
         <p data-i18n="products.dp.body">A modern, open-source disk partitioning and management utility designed for everyone — from power users to those who just need a clean interface to manage their drives. Full GPT and MBR support, UEFI-aware, cross-platform. No telemetry, no lock-in. Licensed under GPLv3.</p>
         <div class="product-card__specs">
-          <div class="spec"><span class="spec__key">License</span><span class="spec__val">GPLv3</span></div>
-          <div class="spec"><span class="spec__key">Type</span><span class="spec__val">FOSS</span></div>
-          <div class="spec"><span class="spec__key">Partitioning</span><span class="spec__val">GPT + MBR</span></div>
-          <div class="spec"><span class="spec__key">Platform</span><span class="spec__val">GNU/Linux</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.license">License</span><span class="spec__val">GPLv3</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.type">Type</span><span class="spec__val" data-i18n="spec.foss">FOSS</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.partitioning">Partitioning</span><span class="spec__val" data-i18n="spec.gpt_mbr">GPT + MBR</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.platform">Platform</span><span class="spec__val" data-i18n="spec.gnu_linux">GNU/Linux</span></div>
         </div>
         <div class="product-card__actions">
           <a href="diskparted/index.html" class="btn btn-primary" data-i18n="products.dp.cta.learn">Learn More</a>
@@ -104,15 +104,38 @@
         <div class="badge badge--blue" style="margin-left:auto;" data-i18n="products.ld.badge">In Development</div>
       </div>
       <div class="product-card__body">
-        <p data-i18n="products.ld.body">LogDock is a structured log management and viewer for developers, sysadmins, and power users. Real-time log tailing, filtering, and search across local files and remote sources — with a clean, fast interface built for daily use. For individuals who hate grepping through walls of text, and for teams who need better visibility into their systems.</p>
+        <p data-i18n="products.ld.body">LogDock is a structured log management and viewer for developers, sysadmins, and power users. Real-time log tailing, filtering, and search across local files and remote sources — with a clean, fast interface built for daily use.</p>
         <div class="product-card__specs">
-          <div class="spec"><span class="spec__key">Audience</span><span class="spec__val">Personal + Professional</span></div>
-          <div class="spec"><span class="spec__key">Type</span><span class="spec__val">Desktop App</span></div>
-          <div class="spec"><span class="spec__key">Platform</span><span class="spec__val">Linux-first · More planned</span></div>
-          <div class="spec"><span class="spec__key">Status</span><span class="spec__val">Design &amp; Development</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.audience">Audience</span><span class="spec__val" data-i18n="spec.pers_prof">Personal + Professional</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.platform">Platform</span><span class="spec__val" data-i18n="spec.linux_more">Linux-first · More planned</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.status">Status</span><span class="spec__val" data-i18n="spec.design_dev">Design &amp; Development</span></div>
         </div>
         <div class="product-card__actions">
           <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.ld.cta1">Join Waitlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LogDock CE -->
+    <div class="product-card reveal" id="logdock-ce">
+      <div class="product-card__header">
+        <div class="product-card__icon" style="font-size:1.4rem;">L</div>
+        <div>
+          <div class="product-card__name">LogDock CE</div>
+          <div class="product-card__tagline" data-i18n="products.ldce.tagline">Community Edition — Structured log viewer</div>
+        </div>
+        <div class="badge badge--blue" style="margin-left:auto;" data-i18n="products.ldce.badge">In Development</div>
+      </div>
+      <div class="product-card__body">
+        <p data-i18n="products.ldce.body">The community-driven, open-source version of LogDock. Focused on local log file management, real-time tailing, and essential filtering for developers and power users. Built for the community, by the community.</p>
+        <div class="product-card__specs">
+          <div class="spec"><span class="spec__key" data-i18n="spec.audience">Audience</span><span class="spec__val" data-i18n="spec.pers_comm">Personal + Community</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.platform">Platform</span><span class="spec__val" data-i18n="spec.linux_more">Linux-first · More planned</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.status">Status</span><span class="spec__val" data-i18n="spec.design_dev">Design &amp; Development</span></div>
+        </div>
+        <div class="product-card__actions">
+          <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.ldce.cta1">Join Waitlist</a>
+          <a href="https://codeberg.org/TechnologiesBudgie/logdock-ce/" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="products.ldce.cta.source">View Source on Codeberg</a>
         </div>
       </div>
     </div>
@@ -130,13 +153,12 @@
       <div class="product-card__body">
         <p data-i18n="products.fs.body">Forge Suite is a developer and productivity toolkit — a cohesive set of tools that work together or standalone. More details coming as development progresses. Built for people who work in and around software, regardless of role or team size.</p>
         <div class="product-card__specs">
-          <div class="spec"><span class="spec__key">Status</span><span class="spec__val">Early Design Phase</span></div>
-          <div class="spec"><span class="spec__key">Platform</span><span class="spec__val">Linux-first · More planned</span></div>
-          <div class="spec"><span class="spec__key">Audience</span><span class="spec__val">Personal + Teams</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.status">Status</span><span class="spec__val" data-i18n="spec.early_design">Early Design Phase</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.platform">Platform</span><span class="spec__val" data-i18n="spec.linux_more">Linux-first · More planned</span></div>
+          <div class="spec"><span class="spec__key" data-i18n="spec.audience">Audience</span><span class="spec__val" data-i18n="spec.pers_teams">Personal + Teams</span></div>
         </div>
         <div class="product-card__actions">
           <a href="../preorder/index.html" class="btn btn-primary" data-i18n="products.fs.cta1">Join Waitlist</a>
-          <a href="../contact/index.html" class="btn btn-outline" data-i18n="products.fs.cta2">Express Interest</a>
         </div>
       </div>
     </div>
@@ -185,6 +207,7 @@
       <div class="footer__col"><h4 data-i18n="footer.products">Products</h4><ul>
         <li><a href="#diskparted">DiskParted</a></li>
         <li><a href="#logdock">LogDock</a></li>
+        <li><a href="#logdock-ce">LogDock CE</a></li>
         <li><a href="#forge">Forge Suite</a></li>
         <li><a href="../preorder/index.html" data-i18n="footer.preorder">Pre-order</a></li>
       </ul></div>
